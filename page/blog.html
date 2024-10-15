@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Your Farm Name</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Your Farm Name</h1>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Your Farm Logo" class="logo">
+        </div>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -20,45 +23,22 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section id="blog">
-            <h2>Blog</h2>
-            <button id="new-blog-btn">+ New Blog</button>
-            <div id="blog-posts" class="blog-grid">
-                <!-- Blog posts will be dynamically added here -->
-            </div>
-        </section>
-    </main>
+
+    <section id="blog">
+        <h2>Blog</h2>
+        <div class="blog-posts">
+            <!-- Add blog posts here -->
+            <article class="post">
+                <h3>Blog Post Title</h3>
+                <p>Posted on <time datetime="2024-10-15">October 15, 2024</time></p>
+                <p>Blog post content goes here...</p>
+            </article>
+            <!-- Repeat the above block for each blog post -->
+        </div>
+    </section>
+
     <footer>
         <p>© 2024 Your Farm Name. All rights reserved.</p>
     </footer>
-
-    <!-- Blog Editor Modal -->
-    <div id="blog-editor-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">×</span>
-            <h2>New Blog Post</h2>
-            <form id="blog-form">
-                <label for="blog-title">Title:</label>
-                <input type="text" id="blog-title" name="blog-title" required>
-                
-                <label for="blog-date">Posted on:</label>
-                <input type="date" id="blog-date" name="blog-date" required>
-                
-                <label for="blog-image">Image:</label>
-                <input type="file" id="blog-image" name="blog-image" accept="image/*" required>
-                
-                <label for="blog-content">Content:</label>
-                <textarea id="blog-content" name="blog-content" rows="10" required></textarea>
-                
-                <div class="form-buttons">
-                    <button type="button" id="cancel-btn">Cancel</button>
-                    <button type="submit">Submit</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
