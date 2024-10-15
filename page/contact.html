@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Your Farm Name</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("YOUR_USER_ID");
+        })();
+    </script>
     <script src="../script.js" defer></script>
 </head>
 <body>
@@ -15,7 +21,7 @@
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="animal.html">Farm Animals</a></li>
+                <li><a href="animals.html">Farm Animals</a></li>
                 <li><a href="recipes.html">Recipes and Blog</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
@@ -24,7 +30,7 @@
 
     <section id="contact">
         <h2>Contact Us</h2>
-        <form action="https://getform.io/f/aolgvexb" method="POST">
+        <form id="contact-form">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             <label for="email">Email:</label>
