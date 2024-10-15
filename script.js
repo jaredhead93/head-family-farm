@@ -1,5 +1,8 @@
 // Wait for the DOM to fully load
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize EmailJS
+    emailjs.init("xeAYerbiYQSpVLzyD");
+
     // Handle form submission
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
@@ -14,10 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     alert('There was an error sending your message. Please try again later.');
                 });
         });
-    };
+    }
 
-    // Add more JavaScript functionality as needed
-    // Example: Toggle visibility of product categories
+    // Example: Toggle visibility of product categories (if applicable)
     const categoryLinks = document.querySelectorAll('.categories a');
     categoryLinks.forEach(link => {
         link.addEventListener('click', function(event) {
